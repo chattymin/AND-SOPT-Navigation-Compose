@@ -31,6 +31,7 @@ fun CScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Spacer(modifier = Modifier.weight(1f))
+        Text(text = "This is C Screen")
         Text(text = "Hello, my ID is ${c.id}!\nmy password is ${c.password}")
         Spacer(modifier = Modifier.weight(1f))
         Button(

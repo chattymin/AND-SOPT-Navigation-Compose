@@ -32,6 +32,7 @@ fun DScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Spacer(modifier = Modifier.weight(1f))
+        Text(text = "This is D Screen")
         Text(text = "Hello, my ID is ${profile.id}!\nmy password is ${profile.password}")
         Spacer(modifier = Modifier.weight(1f))
     }
