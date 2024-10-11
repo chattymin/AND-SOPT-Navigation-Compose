@@ -15,13 +15,14 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class C(
     val id: String,
-    val password: String
+    val password: String,
 )
 
 @Composable
 fun CScreen(
     paddingValues: PaddingValues,
-    c: C
+    c: C,
+    navigateToD: (id: String, password: String) -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -31,6 +32,17 @@ fun CScreen(
     ) {
         Spacer(modifier = Modifier.weight(1f))
         Text(text = "Hello, my ID is ${c.id}!\nmy password is ${c.password}")
+        Spacer(modifier = Modifier.weight(1f))
+        Button(
+            onClick = {
+                navigateToD(
+                    c.id,
+                    c.password
+                )
+            },
+        ) {
+            Text(text = "Click me!")
+        }
         Spacer(modifier = Modifier.weight(1f))
     }
 
